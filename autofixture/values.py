@@ -1,4 +1,3 @@
-from django.utils.six import with_metaclass
 
 
 class ValuesMetaclass(type):
@@ -47,5 +46,5 @@ class ValuesBase(dict):
         return self
 
 
-class Values(with_metaclass(ValuesMetaclass, ValuesBase)):
+class Values(ValuesBase, metaclass=ValuesMetaclass):
     pass
